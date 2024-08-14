@@ -39,5 +39,5 @@ This project contains a Python script that converts a decimal string into its bi
 
     Enter the number you want to convert to binary: 34
     Number is: 34
-    Binary value is: 100010
+    Binary sequence is: 100010
 
