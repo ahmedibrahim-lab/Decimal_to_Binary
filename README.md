@@ -1,4 +1,4 @@
-# Binary to Decimal Converter
+# Decimal to Binary Converter
 
 This project contains a Python script that converts a decimal string into its binary equivalent. The script also includes input validation to ensure that the input is a valid number.
 
