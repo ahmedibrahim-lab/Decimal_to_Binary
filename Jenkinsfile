@@ -19,11 +19,15 @@ pipeline {
         }
 
         stage('Run Tests') {
-            sh 'python3 -m unittest discover .'
+            steps {
+                sh 'python3 -m unittest discover .'
+            }
         }
 
         stage('Deploy') {
-            echo 'Deploying Python app...'
+            steps {
+                echo 'Deploying Python app...'
+            }
         }
     }
 
