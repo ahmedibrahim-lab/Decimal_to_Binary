@@ -4,20 +4,11 @@ pipeline {
     triggers {
         githubPush()
     }
-    environment {
-        PYTHON = '/usr/bin/python3'
-    }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                sh 'pip3 install -r requirements.txt'
             }
         }
 
