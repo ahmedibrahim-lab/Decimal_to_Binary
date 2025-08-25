@@ -1,8 +1,11 @@
 pipeline {
-    agent { label 'python-agent' }
+    agent any
 
+    triggers {
+        githubPush()
+    }
     environment {
-        PYTHON_ENV = 'python3'
+        PYTHON = '/usr/bin/python3'
     }
 
     stages {
@@ -14,13 +17,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'python -m unittest discover .'
+                sh 'python3 -m unittest discover .'
             }
         }
 
